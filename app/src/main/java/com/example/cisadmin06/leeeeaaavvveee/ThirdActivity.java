@@ -8,9 +8,12 @@ import android.view.View;
 /**
  * Created by cisadmin06 on 27/03/17.
  */
-public class ThirdActivity  {
+public class ThirdActivity extends Activity  {
 
 
-
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.third_layout);
+    }
 
 }

@@ -8,39 +8,37 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 public class SecondActivity extends Activity {
+    Button btn1,btn2,btn3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_layout);
-        OnClickListener listnr=new OnClickListener() {
+        btn1=(Button) findViewById(R.id.button1);
+        btn2=(Button) findViewById(R.id.button2);
+        btn3=(Button) findViewById(R.id.button3);
+        btn1.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(SecondActivity.this,ThirdActivity.class);
+                Intent i=new Intent(SecondActivity.this,ThirdActivity.class);
                 startActivity(i);
             }
-        };
-        Button btn =(Button) findViewById(R.id.button1);
-        btn.setOnClickListener(listnr);
-
-        OnClickListener listner=new OnClickListener() {
+        });
+        btn2.setOnClickListener(new OnClickListener() {
             @Override
-            public void onClick(View vi) {
-                Intent j= new Intent(SecondActivity.this,FourthActivity.class);
-                startActivity(j);
+            public void onClick(View v) {
+                Intent i=new Intent(SecondActivity.this,FourthActivity.class);
+                startActivity(i);
             }
-        };
-        Button btn1 =(Button) findViewById(R.id.button2);
-        btn1.setOnClickListener(listner);
-
-        OnClickListener listner2=new OnClickListener() {
+        });
+        btn3.setOnClickListener(new OnClickListener() {
             @Override
-            public void onClick(View vie) {
-                Intent k= new Intent(SecondActivity.this,FifthActivity.class);
-                startActivity(k);
+            public void onClick(View v) {
+                Intent i=new Intent(SecondActivity.this,FifthActivity.class);
+                startActivity(i);
             }
-        };
-        Button btn2 =(Button) findViewById(R.id.button3);
-        btn2.setOnClickListener(listner2);
+        });
+
+
 
     }
 }
